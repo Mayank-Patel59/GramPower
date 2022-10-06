@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "serialNo": {
+            "type": "string"
+        },
+        "Voltage": {
+            "type": "number"
+        },
+        "Current": {
+            "type": "number"
+        },
+        "Power(W)": {
+            "type": "number"
+        },
+        "power_factor": {
+            "type": "number"
+        },
+        "updatedAt": {
+            "type": "object",
+            "properties": {
+                "$date": {
+                    "type": "object",
+                    "properties": {
+                        "$numberLong": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "$numberLong"
+                    ]
+                }
+            },
+            "required": [
+                "$date"
+            ]
+        },
+        "createdAt": {
+            "type": "object",
+            "properties": {
+                "$date": {
+                    "type": "object",
+                    "properties": {
+                        "$numberLong": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "$numberLong"
+                    ]
+                }
+            },
+            "required": [
+                "$date"
+            ]
+        },
+        "mode": {
+            "type": "integer"
+        },
+        "fan_speed": {
+            "type": "integer"
+        },
+        "temp": {
+            "type": "integer"
+        },
+        "ac_power": {
+            "type": "integer"
+        },
+        "offline": {
+            "type": "boolean"
+        },
+        "current_kwh": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "Current",
+        "Power(W)",
+        "Voltage",
+        "ac_power",
+        "createdAt",
+        "current_kwh",
+        "fan_speed",
+        "mode",
+        "offline",
+        "power_factor",
+        "serialNo",
+        "temp",
+        "updatedAt"
+    ]
+}

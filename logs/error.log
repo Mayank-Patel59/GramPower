@@ -1,0 +1,139 @@
+03-10-2022 11:31:53 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633a7ab335f513eced7dac8c, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+03-10-2022 11:31:53 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 45, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+03-10-2022 11:34:25 - main.py - GPdata - main - 
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    GP_meter.connect_db(MongoDB_Host, MongoDB_port, dbname, collname, meterRaw_name)
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 31, in connect_db
+    client.admin.command('ping')
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\database.py", line 799, in command
+    with self.__client._socket_for_reads(read_preference, session) as (
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1268, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1229, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 272, in select_server
+    server = self._select_server(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 261, in _select_server
+    servers = self.select_servers(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 223, in select_servers
+    server_descriptions = self._select_servers_loop(selector, server_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 250, in _select_servers_loop
+    self._condition.wait(common.MIN_HEARTBEAT_INTERVAL)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+03-10-2022 11:34:31 - main.py - GPdata - main - 
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    GP_meter.connect_db(MongoDB_Host, MongoDB_port, dbname, collname, meterRaw_name)
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 31, in connect_db
+    client.admin.command('ping')
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\database.py", line 799, in command
+    with self.__client._socket_for_reads(read_preference, session) as (
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1268, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1229, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 272, in select_server
+    server = self._select_server(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 261, in _select_server
+    servers = self.select_servers(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 223, in select_servers
+    server_descriptions = self._select_servers_loop(selector, server_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 250, in _select_servers_loop
+    self._condition.wait(common.MIN_HEARTBEAT_INTERVAL)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+03-10-2022 11:35:04 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633a7b7214242829329831f4, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+03-10-2022 11:35:04 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 45, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+03-10-2022 17:08:48 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633ac9aaf043c3da58cfc12e, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+03-10-2022 17:08:48 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 45, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+03-10-2022 17:11:38 - main.py - GPdata - main - 
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    GP_meter.connect_db(MongoDB_Host, MongoDB_port, dbname, collname, meterRaw_name)
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 31, in connect_db
+    client.admin.command('ping')
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\database.py", line 799, in command
+    with self.__client._socket_for_reads(read_preference, session) as (
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1268, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\mongo_client.py", line 1229, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 272, in select_server
+    server = self._select_server(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 261, in _select_server
+    servers = self.select_servers(selector, server_selection_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 223, in select_servers
+    server_descriptions = self._select_servers_loop(selector, server_timeout, address)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\site-packages\pymongo\topology.py", line 250, in _select_servers_loop
+    self._condition.wait(common.MIN_HEARTBEAT_INTERVAL)
+  File "C:\Users\www.abcom.in\AppData\Local\Programs\Python\Python310\lib\threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+03-10-2022 17:12:16 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633aca7ab78597baf4bd2806, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+03-10-2022 17:12:16 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 45, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+04-10-2022 12:11:03 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633bd561674df74fed3d2cf8, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+04-10-2022 12:11:03 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+06-10-2022 14:28:19 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633e988c218218950c18fb65, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+06-10-2022 14:28:19 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+06-10-2022 14:58:22 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633e9f974f15ee97a4cc73d5, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+06-10-2022 14:58:22 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
+06-10-2022 15:13:11 - database.py - GPdata - connect_db - Failed to establish connection to MongoDB instance localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 633ea311e6e9840d204fbd9a, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+06-10-2022 15:13:11 - main.py - GPdata - main - 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\main.py", line 44, in main
+    meter_list = GP_meter.get_meters()
+  File "C:\Users\www.abcom.in\Desktop\Testing_Work\modules\database.py", line 54, in get_meters
+    meter_list = list(self.deviceMap.find(find_meters))
+AttributeError: 'NoneType' object has no attribute 'find'
